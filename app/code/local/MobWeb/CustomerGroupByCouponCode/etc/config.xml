@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MobWeb_CustomerGroupByCouponCode>
+            <version>0.1.0</version>
+        </MobWeb_CustomerGroupByCouponCode>
+    </modules>
+    <global>
+        <models>
+            <!-- This "handle" is referenced later on, see the next comment -->
+            <customergroupbycouponcode>
+                <class>MobWeb_CustomerGroupByCouponCode_Model</class>
+            </customergroupbycouponcode>
+        </models>
+        <helpers>
+            <customergroupbycouponcode>
+                <class>MobWeb_CustomerGroupByCouponCode_Helper</class>
+            </customergroupbycouponcode>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <sales_order_save_after>
+                <observers>
+                    <customergroupbycouponcode>
+                        <type>singleton</type>
+                        <!-- This is where we reference the model that was defined earlier -->
+                        <class>customergroupbycouponcode/observer</class>
+                        <!-- This can be named anything, but it has to match a method in the class defined in the previous line -->
+                        <method>salesOrderSaveAfter</method>
+                    </customergroupbycouponcode>
+                </observers>
+            </sales_order_save_after>
+        </events>
+    </frontend>
+</config>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<customergroupbycouponcode translate="title" module="customergroupbycouponcode">
+										<title>customergroupbycouponcode</title>
+									</customergroupbycouponcode>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

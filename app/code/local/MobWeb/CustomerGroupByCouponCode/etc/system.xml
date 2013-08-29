@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<customergroupbycouponcode module="customergroupbycouponcode">
+			<tab>customer</tab>
+			<label>Customer Group By Coupon Code</label>
+			<sort_order>9001</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>0</show_in_website>
+			<show_in_store>0</show_in_store>
+			<groups>
+				<customergroupbycouponcode module="customergroupbycouponcode">
+					<label>General Settings</label>
+					<expanded>1</expanded>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<!-- Mage::getStoreConfig( 'customergroupbycouponcode/customergroupbycouponcode/coupon_codes' ) -->
+						<coupon_codes>
+							<label>Enter your combinations here:</label>
+							<validate>required-entry</validate>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[
+
+							]]></comment>
+						</coupon_codes>
+					</fields>
+                    <comment><![CDATA[
+                    	<p>In the textarea below, enter an unlimited number of Coupon Code ID to Customer Group ID combinations.</p>
+                    	<p>Enter one combination per line, each combination separated by a colon (:).</p>
+                    	<p>For example, if you wanted to link the Coupon Code with the ID 5 to the Customer Group with the ID 2, you would enter the following: <span style="font-style:italic">5:2</span></p>
+					]]></comment>
+				</customergroupbycouponcode>
+			</groups>
+		</customergroupbycouponcode>
+	</sections>
+</config>

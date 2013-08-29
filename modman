@@ -1,0 +1,6 @@
+app/code/local/MobWeb/CustomerGroupByCouponCode app/code/local/MobWeb/CustomerGroupByCouponCode/
+
+app/etc/modules/MobWeb_CustomerGroupByCouponCode.xml app/etc/modules/MobWeb_CustomerGroupByCouponCode.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
